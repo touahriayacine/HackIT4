@@ -30,7 +30,7 @@ public class OffersActivity extends AppCompatActivity {
     RelativeLayout dec_price;
     float price_to_pay = 200.00F;
     float max_unit_price = 200.3F;
-    float max_liters = 100;
+    float max_liters = 50;
     float total_balance = 4500.0F;
     TextView cash_availabale ;
     LinearLayout ll;
@@ -40,7 +40,7 @@ public class OffersActivity extends AppCompatActivity {
 
         fuels.add("Normal Gasoline");
         fuels.add("Premium Gasoline");
-        fuels.add("Premium Unleaded Gasoline");
+        fuels.add("PUG");
         fuels.add("Diesel fuel");
         fuels.add("LPG/C");
         prices.add( 100.15F);
@@ -84,7 +84,7 @@ public class OffersActivity extends AppCompatActivity {
             public void onClick(View view) {
                 TextView tv = (TextView) findViewById(R.id.price);
                 OffersActivity c = ((OffersActivity)view.getContext());
-                if(c.price_to_pay + val > 200.0 && ((c.price_to_pay + val) < c.max_liters * c.max_unit_price))  c.price_to_pay += val;
+                if(c.price_to_pay + val >= 200.0 && ((c.price_to_pay + val) <= c.max_liters * c.max_unit_price))  c.price_to_pay += val;
                 tv.setText(((Float)c.price_to_pay).toString()+" DA");
 
                 // le littrage:

@@ -46,23 +46,24 @@
                 />
             <RelativeLayout
                 android:id="@+id/style_background"
-                android:layout_width="120dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/unselected_card"
-                android:gravity="center"
+                android:background="@drawable/unselected_shape_background"
+                android:gravity="end|center_vertical"
                 >
 
                 <TextView
                     android:id="@+id/fuel_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:fontFamily="@font/poppinsmedium"
                     android:text="1.15 DA/L"
                     android:textColor="@color/grey1"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
             </RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

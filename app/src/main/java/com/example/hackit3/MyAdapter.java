@@ -2,7 +2,6 @@ package com.example.hackit3;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -43,12 +41,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         if(position == ((OffersActivity) this.c).selected){
             holder.name_fuel.setTextColor(Color.parseColor("#2E3192"));
             holder.ring.setBackground(this.c.getResources().getDrawable(R.drawable.ring_blue));
-            holder.style.setBackground(this.c.getResources().getDrawable(R.drawable.selected_card));
+            holder.style.setBackground(this.c.getResources().getDrawable(R.drawable.selected_shape_background));
             holder.price_fuel.setTextColor(Color.parseColor("#FFDC00"));
         }else {
             holder.name_fuel.setTextColor(Color.parseColor("#A7A6A6"));
             holder.ring.setBackground(this.c.getResources().getDrawable(R.drawable.ring_grey));
-            holder.style.setBackground(this.c.getResources().getDrawable(R.drawable.unselected_card));
+            holder.style.setBackground(this.c.getResources().getDrawable(R.drawable.unselected_shape_background));
             holder.price_fuel.setTextColor(Color.parseColor("#A7A6A6"));
         }
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 c.selected = position;
                 holder.name_fuel.setTextColor(Color.parseColor("#2E3192"));
                 holder.ring.setBackground(c.getResources().getDrawable(R.drawable.ring_blue));
-                holder.style.setBackground(c.getResources().getDrawable(R.drawable.selected_card));
+                holder.style.setBackground(c.getResources().getDrawable(R.drawable.selected_shape_background));
                 holder.price_fuel.setTextColor(Color.parseColor("#FFDC00"));
                 notifyDataSetChanged();
             }
