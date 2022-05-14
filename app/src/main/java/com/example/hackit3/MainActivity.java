@@ -8,35 +8,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
-    Button enterBtn;
+    LinearLayout login;
     EditText phoneNumberEdit;
-    EditText emailEdit;
     String phoneNumber = "";
-    String email = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        enterBtn = (Button) findViewById(R.id.enter_button);
+        login = (LinearLayout) findViewById(R.id.login);
         phoneNumberEdit = (EditText) findViewById(R.id.phone_number);
-        emailEdit = (EditText) findViewById(R.id.email);
         configBtn(this);
     }
 
 
     void configBtn(Context c) {
-        enterBtn.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(c, OffersActivity.class);
                 phoneNumber = phoneNumberEdit.getText().toString();
                 i.putExtra("phone_number", phoneNumber);
-                email = emailEdit.getText().toString();
-                i.putExtra("email" , email);
                 startActivity(i);
             }
         });
