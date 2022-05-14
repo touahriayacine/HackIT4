@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HackIT3">
         <activity
+            android:name=".chooseWyToPay"
+            android:exported="false" />
+        <activity
             android:name=".OffersActivity"
             android:exported="false" />
         <activity

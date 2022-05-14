@@ -109,7 +109,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/price_container"
-            app:layout_constraintEnd_toStartOf="@+id/pail"
             >
 
             <TextView
@@ -128,43 +127,45 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/price_container"
                 android:gravity="center_vertical"
-                android:padding="10dp"
-                >
+                android:padding="10dp">
 
                 <RelativeLayout
                     android:id="@+id/up_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="55dp"
+                    android:layout_height="70dp"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/up_n_down_container"
-                    android:gravity="center">
+                    android:gravity="center"
+                    >
 
                     <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
                         android:src="@drawable/upload" />
                 </RelativeLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/price"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotomedium"
-                    android:text="1000,00 DA"
+                    android:text="200,0 DA"
+                    android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
                 <RelativeLayout
                     android:id="@+id/down_button"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="55dp"
+                    android:layout_height="70dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/up_n_down_container"
                     android:gravity="center"
                     android:rotation="180">
 
                     <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
                         android:src="@drawable/upload" />
                 </RelativeLayout>
             </LinearLayout>
@@ -173,7 +174,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/price_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/pail"
@@ -183,7 +183,7 @@
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="94dp"
                 android:layout_height="69dp"
-                android:progress="20"
+                android:progress="0"
                 android:rotation="-90"
                 android:progressBackgroundTint="@color/blueNaftal"
                 android:progressTint="@color/yellowNaftal"
@@ -191,6 +191,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/progress_horizontal"
                 />
 
             <ImageView
@@ -202,21 +203,9 @@
                 android:layout_width="70dp"
                 android:layout_height="95dp"
                 android:src="@drawable/pail" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20 L"
-                android:fontFamily="@font/poppinsbold"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginRight="10dp"
-                />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <LinearLayout
         android:id="@+id/pay_bills_btn"
         android:layout_width="match_parent"

@@ -45,12 +45,13 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 />
             <RelativeLayout
+                android:id="@+id/style_background"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/unselected_car"
+                android:background="@drawable/unselected_card"
                 android:gravity="center"
                 >
 
